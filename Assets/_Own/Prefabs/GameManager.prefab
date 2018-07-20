@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4576678287806098}
   - component: {fileID: 114236735532840142}
   - component: {fileID: 114688859721442894}
+  - component: {fileID: 114651928517187688}
   m_Layer: 0
-  m_Name: CityManager
-  m_TagString: Untagged
+  m_Name: GameManager
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +64,23 @@ MonoBehaviour:
   Crossroads: {fileID: 1203375351752816, guid: de97029ff25372b4db4fb39169905294, type: 2}
   mapWidth: 20
   mapHeight: 20
+--- !u!114 &114651928517187688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e60addaefcdec4eb123dfaaa54d29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  UpgradeFarmHouse: {fileID: 0}
+  UpgradeFarm: {fileID: 0}
+  UpgradeHouse: {fileID: 0}
+  UpgradeTower: {fileID: 0}
+  NewBuilding: {fileID: 0}
 --- !u!114 &114688859721442894
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,9 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4541425510128074}
+  - component: {fileID: 114955092930719102}
+  - component: {fileID: 114049115580708846}
+  - component: {fileID: 65878915600989318}
   m_Layer: 0
   m_Name: Farm_House_Spawner
-  m_TagString: Untagged
+  m_TagString: FarmHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264495002840182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 587.25543, y: 61.242096, z: -27.558296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4267065984226698}
@@ -550,6 +553,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592999731866500}
   m_Mesh: {fileID: 4300000, guid: 7d0338f00ae6e9242964059b50a7a393, type: 3}
+--- !u!65 &65878915600989318
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264495002840182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!95 &95162582110558580
 Animator:
   serializedVersion: 3
@@ -669,3 +684,31 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114049115580708846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264495002840182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2823ff82ebd5e9642932974cc11eee2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  UpgradeFarmHouse: {fileID: 0}
+  UpgradeFarm: {fileID: 0}
+  UpgradeHouse: {fileID: 0}
+  UpgradeTower: {fileID: 0}
+  NewBuilding: {fileID: 0}
+--- !u!114 &114955092930719102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264495002840182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da57311985a7424d942ac843361ac61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

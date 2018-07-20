@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Musicbox
+  - Farm
+  - FarmHouse
+  - House
+  - Tower
+  - Grass
+  - GameManager
   layers:
   - Default
   - TransparentFX
