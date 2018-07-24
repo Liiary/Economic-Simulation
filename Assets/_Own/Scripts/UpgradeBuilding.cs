@@ -4,90 +4,102 @@ using UnityEngine;
 
 public class UpgradeBuilding : MonoBehaviour
 {
-    private GeldProduzieren moneyProduction;
-    private GameObject player;
+    private HouseScript choosenHouse;
+    private MoneyProduction moneyProduction;
+    private GameObject gameManager;
+
+    [SerializeField]
+    private GameObject upgradeFarmHouseCanvas;
+    [SerializeField]
+    private GameObject upgradeFarmCanvas;
+    [SerializeField]
+    private GameObject upgradeHouseCanvas;
+    [SerializeField]
+    private GameObject upgradeTowerCanvas;
 
     public void Upgrade(int buildingNumber)
     {
-        if(player == null)
-            player = GameObject.FindWithTag("Player");
+        if(gameManager == null)
+            gameManager = GameObject.FindWithTag("GameManager");
 
-        if(moneyProduction == null)
-            moneyProduction = player.GetComponent<GeldProduzieren>();
+        if (moneyProduction == null)
+            moneyProduction = gameManager.GetComponent<MoneyProduction>();
 
         if (buildingNumber == 0)
         {
-            GameObject farmHouse = GameObject.FindWithTag("FarmHouse");
+            //GameObject farmHouse = GameObject.FindWithTag("FarmHouse");
+            GameObject farmHouse = MouseControll.ChoosenBuilding.gameObject;
+            choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
-            if(moneyProduction.erweiterungenGeld < 6)
+            if (choosenHouse.extensionMoney >= 6)
             {
-                farmHouse.transform.GetChild(moneyProduction.erweiterungenGeld).GetComponent<MeshRenderer>().enabled = false;
-                moneyProduction.erweiterungenGeld++;
-                farmHouse.transform.GetChild(moneyProduction.erweiterungenGeld).GetComponent<MeshRenderer>().enabled = true;
+                choosenHouse.extensionMoney++;
+                farmHouse.transform.gameObject.tag = "BuildingMax";
+            }
+            else
+            {
+                farmHouse.transform.GetChild(choosenHouse.extensionMoney).GetComponent<MeshRenderer>().enabled = false;
+                choosenHouse.extensionMoney++;
+                farmHouse.transform.GetChild(choosenHouse.extensionMoney).GetComponent<MeshRenderer>().enabled = true;
             }
 
-            if (moneyProduction.erweiterungenGeld >= 6)
-            {
-                moneyProduction.erweiterungenGeld++;
-                farmHouse.transform.gameObject.tag = "EditorOnly";
-            }
-            //else
-            //{   
-            //    farmHouse.transform.GetChild(moneyProduction.erweiterungenGeld).GetComponent<MeshRenderer>().enabled = false;
-            //    moneyProduction.erweiterungenGeld++;
-            //    farmHouse.transform.GetChild(moneyProduction.erweiterungenGeld).GetComponent<MeshRenderer>().enabled = true;
-            //}
         }
 
         if (buildingNumber == 1)
         {
-            GameObject farm = GameObject.FindWithTag("Farm");
+            //GameObject farm = GameObject.FindWithTag("Farm");
+            GameObject farm = MouseControll.ChoosenBuilding.gameObject;
+            choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
-            if (moneyProduction.erweiterungenHolz >= 6)
+            if (choosenHouse.extensionWood >= 6)
             {
-                moneyProduction.erweiterungenHolz++;
-                farm.transform.gameObject.tag = "EditorOnly";
+                choosenHouse.extensionWood++;
+                farm.transform.gameObject.tag = "BuildingMax";
             }
             else
             {
-                farm.transform.GetChild(moneyProduction.erweiterungenHolz).GetComponent<MeshRenderer>().enabled = false;
-                moneyProduction.erweiterungenHolz++;
-                farm.transform.GetChild(moneyProduction.erweiterungenHolz).GetComponent<MeshRenderer>().enabled = true;
+                farm.transform.GetChild(choosenHouse.extensionWood).GetComponent<MeshRenderer>().enabled = false;
+                choosenHouse.extensionWood++;
+                farm.transform.GetChild(choosenHouse.extensionWood).GetComponent<MeshRenderer>().enabled = true;
             }
         }
 
 
         if(buildingNumber == 2)
         {
-            GameObject house = GameObject.FindWithTag("House");
+            //GameObject house = GameObject.FindWithTag("House");
+            GameObject house = MouseControll.ChoosenBuilding.gameObject;
+            choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
-            if (moneyProduction.erweiterungenStein >= 6)
+            if (choosenHouse.extensionStone >= 6)
             {
-                moneyProduction.erweiterungenStein++;
-                house.transform.gameObject.tag = "EditorOnly";
+                choosenHouse.extensionStone++;
+                house.transform.gameObject.tag = "BuildingMax";
             }
             else
             {
-                house.transform.GetChild(moneyProduction.erweiterungenStein).GetComponent<MeshRenderer>().enabled = false;
-                moneyProduction.erweiterungenStein++;
-                house.transform.GetChild(moneyProduction.erweiterungenStein).GetComponent<MeshRenderer>().enabled = true;
+                house.transform.GetChild(choosenHouse.extensionStone).GetComponent<MeshRenderer>().enabled = false;
+                choosenHouse.extensionStone++;
+                house.transform.GetChild(choosenHouse.extensionStone).GetComponent<MeshRenderer>().enabled = true;
             }
         }
 
         if(buildingNumber == 3)
         {
-            GameObject tower = GameObject.FindWithTag("Tower");
+            //GameObject tower = GameObject.FindWithTag("Tower");
+            GameObject tower = MouseControll.ChoosenBuilding.gameObject;
+            choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
-            if (moneyProduction.erweiterungenMetal >= 6)
+            if (choosenHouse.extensionMetal >= 6)
             {
-                moneyProduction.erweiterungenMetal++;
-                tower.transform.gameObject.tag = "EditorOnly";
+                choosenHouse.extensionMetal++;
+                tower.transform.gameObject.tag = "BuildingMax";
             }
             else
             {
-                tower.transform.GetChild(moneyProduction.erweiterungenMetal).GetComponent<MeshRenderer>().enabled = false;
-                moneyProduction.erweiterungenMetal++;
-                tower.transform.GetChild(moneyProduction.erweiterungenMetal).GetComponent<MeshRenderer>().enabled = true;
+                tower.transform.GetChild(choosenHouse.extensionMetal).GetComponent<MeshRenderer>().enabled = false;
+                choosenHouse.extensionMetal++;
+                tower.transform.GetChild(choosenHouse.extensionMetal).GetComponent<MeshRenderer>().enabled = true;
             }
         }
     }

@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 114905785970532342}
   - component: {fileID: 114078991031244952}
   - component: {fileID: 65232453609456986}
+  - component: {fileID: 114027642613694266}
   m_Layer: 0
   m_Name: Tower_Spawner
   m_TagString: Tower
@@ -684,6 +685,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114027642613694266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808734084821978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076d0712c5f9ae14280ec1d0c359c169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extensionMoney: 0
+  extensionWood: 0
+  extensionStone: 0
+  extensionMetal: 0
 --- !u!114 &114078991031244952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,3 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da57311985a7424d942ac843361ac61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeFarmHouseCanvas: {fileID: 0}
+  upgradeFarmCanvas: {fileID: 0}
+  upgradeHouseCanvas: {fileID: 0}
+  upgradeTowerCanvas: {fileID: 0}

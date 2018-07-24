@@ -11,6 +11,7 @@ TagManager:
   - Tower
   - Grass
   - GameManager
+  - BuildingMax
   layers:
   - Default
   - TransparentFX

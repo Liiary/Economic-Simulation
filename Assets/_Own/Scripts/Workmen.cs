@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Handwerker : MonoBehaviour
+public class Workmen : MonoBehaviour                    //Hanwerker
 {
     public GameObject player;
-    public GameObject laden;
+    public GameObject shop;                     //laden
 
     private void Start()
     {
-        var inv = player.GetComponent<SpielerInventar>();
-        var pro = player.GetComponent<GeldProduzieren>();
+        var inv = player.GetComponent<PlayerInventar>();
+        var pro = player.GetComponent<MoneyProduction>();
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            laden.SetActive(true);
+            shop.SetActive(true);
         }
     }
 
@@ -25,7 +25,7 @@ public class Handwerker : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            laden.SetActive(false);
+            shop.SetActive(false);
         }
     }
 

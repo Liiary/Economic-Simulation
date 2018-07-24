@@ -10,4 +10,6 @@ public class CanvasManager : MonoBehaviour
     public GameObject UpgradeHouse;
     public GameObject UpgradeTower;
     public GameObject NewBuilding;
+    public GameObject MaxBuilding;
+    public GameObject Shop;
 }

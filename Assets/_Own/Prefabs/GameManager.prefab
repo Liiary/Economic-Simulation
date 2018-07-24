@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114236735532840142}
   - component: {fileID: 114688859721442894}
   - component: {fileID: 114651928517187688}
+  - component: {fileID: 114374127439648556}
+  - component: {fileID: 114260922359153826}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -64,6 +66,54 @@ MonoBehaviour:
   Crossroads: {fileID: 1203375351752816, guid: de97029ff25372b4db4fb39169905294, type: 2}
   mapWidth: 20
   mapHeight: 20
+--- !u!114 &114260922359153826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2823ff82ebd5e9642932974cc11eee2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114374127439648556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36011172d9003924998084f796c97871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyText: {fileID: 0}
+  WoodText: {fileID: 0}
+  StoneText: {fileID: 0}
+  MetalText: {fileID: 0}
+  Money: 0
+  Wood: 0
+  Stone: 0
+  Metal: 0
+  extraMoney: 0
+  extraWood: 0
+  extraStone: 0
+  extraMetal: 0
+  LevelMoney: 0
+  LevelWood: 0
+  LevelStone: 0
+  LevelMetal: 0
+  workmenMoney: 0
+  workmenWood: 0
+  workmenStone: 0
+  workmenMetal: 0
+  correctionText: {fileID: 0}
+  farmHouse: {fileID: 1264495002840182, guid: c4e5aec2e8385e14c87b09fb50a088b2, type: 2}
+  farm: {fileID: 1070376048457426, guid: c7e4218c9665d9d4c814a2d1b2e77d5f, type: 2}
+  house: {fileID: 1171880707528774, guid: def6f2532b88ae6468c136fb178c58ef, type: 2}
+  tower: {fileID: 1808734084821978, guid: 4c07e95cb3a58e146b5bea5d8a6baae1, type: 2}
+  choosenHouse: {fileID: 0}
 --- !u!114 &114651928517187688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,6 +131,8 @@ MonoBehaviour:
   UpgradeHouse: {fileID: 0}
   UpgradeTower: {fileID: 0}
   NewBuilding: {fileID: 0}
+  MaxBuilding: {fileID: 0}
+  Shop: {fileID: 0}
 --- !u!114 &114688859721442894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205c7b41b2f06c54b85980e20e9ba8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChooseBuildingCanvas: {fileID: 0}
+  Camera: {fileID: 0}
   BuildingSpawn:
-  - {fileID: 1264495002840182, guid: afde29921cbb1ce4ca966e7433d33db6, type: 2}
+  - {fileID: 1264495002840182, guid: c4e5aec2e8385e14c87b09fb50a088b2, type: 2}
   - {fileID: 1070376048457426, guid: c7e4218c9665d9d4c814a2d1b2e77d5f, type: 2}
   - {fileID: 1171880707528774, guid: def6f2532b88ae6468c136fb178c58ef, type: 2}
   - {fileID: 1808734084821978, guid: 4c07e95cb3a58e146b5bea5d8a6baae1, type: 2}

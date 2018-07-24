@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BuildBuilding : MonoBehaviour
 {
-    public GameObject ChooseBuildingCanvas;
+    public Transform Camera;
     public GameObject[] BuildingSpawn;
 
-    //public UpgradeBuilding upgradeFarmHouse;
-    //public UpgradeBuilding upgradeFarm;
-    //public UpgradeBuilding upgradeHouse;
-    //public UpgradeBuilding upgradeTower;
+    private int firstFarmHouse;
+    private int firstFarm;
+    private int firstHouse;
+    private int firstTower;
 
     private CityBuilder cityBuilder;
     private GameObject[,] existingBuildings;
@@ -105,22 +105,66 @@ public class BuildBuilding : MonoBehaviour
             existingBuildings[w, h] = BuildingSpawn[buildingNumber];
             if(buildingNumber == 0)
             {
-                Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                GameObject farmHouse = Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                if(firstFarmHouse == 0)
+                {
+                    firstFarmHouse++;
+                }
+                else
+                {
+                    Vector3 cameraPos = Camera.transform.position;
+                    cameraPos.x = farmHouse.transform.position.x;
+                    cameraPos.z = farmHouse.transform.position.z;
+                    Camera.transform.position = cameraPos;
+                }
             }
 
             if(buildingNumber == 1)
             {
-                Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                GameObject farm = Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                if (firstFarm == 0)
+                {
+                    firstFarm++;
+                }
+                else
+                {
+                    Vector3 cameraPos = Camera.transform.position;
+                    cameraPos.x = farm.transform.position.x;
+                    cameraPos.z = farm.transform.position.z;
+                    Camera.transform.position = cameraPos;
+                }
             }
 
             if(buildingNumber == 2)
             {
-                Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                GameObject house = Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                if (firstHouse == 0)
+                {
+                    firstHouse++;
+                }
+                else
+                {
+                    Vector3 cameraPos = Camera.transform.position;
+                    cameraPos.x = house.transform.position.x;
+                    cameraPos.z = house.transform.position.z;
+                    Camera.transform.position = cameraPos;
+                }
             }
 
             if(buildingNumber == 3)
             {
-                Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                GameObject tower = Instantiate(BuildingSpawn[buildingNumber], pos, Quaternion.identity);
+                if (firstTower == 0)
+                {
+                    firstTower++;
+                }
+                else
+                {
+                    Vector3 cameraPos = Camera.transform.position;
+                    cameraPos.x = tower.transform.position.x;
+                    cameraPos.z = tower.transform.position.z;
+                    Camera.transform.position = cameraPos;
+                }
             }
         }
         else

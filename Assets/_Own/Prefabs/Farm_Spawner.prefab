@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114285593625817280}
   - component: {fileID: 114243280771436832}
   - component: {fileID: 65422928296621858}
+  - component: {fileID: 114841261992355236}
   m_Layer: 0
   m_Name: Farm_Spawner
   m_TagString: Farm
@@ -706,3 +707,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da57311985a7424d942ac843361ac61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeFarmHouseCanvas: {fileID: 0}
+  upgradeFarmCanvas: {fileID: 0}
+  upgradeHouseCanvas: {fileID: 0}
+  upgradeTowerCanvas: {fileID: 0}
+--- !u!114 &114841261992355236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070376048457426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076d0712c5f9ae14280ec1d0c359c169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extensionMoney: 0
+  extensionWood: 0
+  extensionStone: 0
+  extensionMetal: 0
