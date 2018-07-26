@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Bying : MonoBehaviour                  //Kaufen
 {
-
     //public GameObject player;
 
     //int inventar;
@@ -82,88 +81,78 @@ public class Bying : MonoBehaviour                  //Kaufen
 
     public void UpgradeExpensionDisplay(int upgradeDisplayFabric)                  //UpgradeKostenAnzeige
     {
-        
         if (upgradeDisplayFabric == 0)
         {
-            
             ExpensionMoneyText.text = "Geld: " + levelMoneyExpension.ToString();
         }
         else if (upgradeDisplayFabric == 1)
         {
-           
             ExpensionWoodText.text = "Holz: " + levelWoodExpension.ToString();
         }
         else if (upgradeDisplayFabric == 2)
         {
-            
             ExpensionStoneText.text = "Stein: " + levelStoneExpension.ToString();
         }
         else if (upgradeDisplayFabric == 3)
         {
-           
             ExpensionMetalText.text = "Metal: " + levelMetalExpension.ToString();
         }
     }
 
     public void WorkmenExpensionDisplay(int workmenDispayFabric)                        //ArbeiterKostenAnzeige
     {
-        
         if (workmenDispayFabric == 0)
         {
-            
             WorkmenExpensionMoneyText.text = "Geld: " + workmenMoneyExpension.ToString();
         }
         else if (workmenDispayFabric == 1)
         {
-            
             WorkmenExpensionWoodText.text = "Holz: " + workmenWoodExpension.ToString();
         }
         else if (workmenDispayFabric == 2)
         {
-            
             WorkmenExpensionStoneText.text = "Stein: " + workmenStoneExpension.ToString();
         }
         else if (workmenDispayFabric == 3)
         {
-            
             WorkmenExpensionMetalText.text = "Metal: " + workmenMetalExpension.ToString();
         }
     }
 
-    public void SubtractFabric(int subtractFabric,int expension,int workUpgrade)                    //int stoff, int kosten, int arbeitUpgrade
+    public void SubtractFabric(int subtractFabric, int expension, int workUpgrade)                    //int stoff, int kosten, int arbeitUpgrade
     {
         if (subtractFabric == 0)//Geld
         {
-            inventar=player.GetComponent<PlayerInventar>().playerMoney;
+            inventar = player.GetComponent<PlayerInventar>().playerMoney;
             inventar = inventar - expension;
             player.GetComponent<PlayerInventar>().playerMoney = inventar;
-            
+
         }
         else if (subtractFabric == 1)//Holz
         {
             inventar = player.GetComponent<PlayerInventar>().playerWood;
             inventar = inventar - expension;
             player.GetComponent<PlayerInventar>().playerWood = inventar;
-            
+
         }
         else if (subtractFabric == 2)//Stein
         {
             inventar = player.GetComponent<PlayerInventar>().playerStone;
             inventar = inventar - expension;
             player.GetComponent<PlayerInventar>().playerStone = inventar;
-            
+
         }
         else if (subtractFabric == 3)//Metal
         {
             inventar = player.GetComponent<PlayerInventar>().playerMetal;
             inventar = inventar - expension;
             player.GetComponent<PlayerInventar>().playerMetal = inventar;
-            
+
         }
-        ExpensionAddition(subtractFabric,workUpgrade);
+        ExpensionAddition(subtractFabric, workUpgrade);
     }
 
-    public void ExpensionAddition(int expensionAddFabric,int upgradeWorkmen)                   //KostenErhöhen (int stoff, int UpAr)
+    public void ExpensionAddition(int expensionAddFabric, int upgradeWorkmen)                   //KostenErhöhen (int stoff, int UpAr)
     {
         if (expensionAddFabric == 0)
         {
@@ -213,46 +202,46 @@ public class Bying : MonoBehaviour                  //Kaufen
 
     public void InventarHouseTest(int art)                   //InventarTestenHäuser
     {
-            if(art == 0)
+        if (art == 0)
+        {
+            if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
             {
-                if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
-                {
-                    ByingHouses(art);
-                    SubtractFabric(art, levelMoneyExpension, 1);
-                    levelMoney++;
-                    UpgradeExpensionDisplay(art);
-                }
+                ByingHouses(art);
+                SubtractFabric(art, levelMoneyExpension, 1);
+                levelMoney++;
+                UpgradeExpensionDisplay(art);
             }
-            else if (art == 1)
+        }
+        else if (art == 1)
+        {
+            if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
             {
-                if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
-                {
-                    ByingHouses(art);
-                    SubtractFabric(art, levelWoodExpension, 1);
-                    levelWood++;
-                    UpgradeExpensionDisplay(art);
-                }
+                ByingHouses(art);
+                SubtractFabric(art, levelWoodExpension, 1);
+                levelWood++;
+                UpgradeExpensionDisplay(art);
             }
-            else if (art == 2)
+        }
+        else if (art == 2)
+        {
+            if (player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
             {
-                if (player.GetComponent<PlayerInventar>().playerStone>= levelStoneExpension)
-                {
-                    ByingHouses(art);
-                    SubtractFabric(art, levelStoneExpension, 1);
-                    levelStone++;
-                    UpgradeExpensionDisplay(art);
-                }
+                ByingHouses(art);
+                SubtractFabric(art, levelStoneExpension, 1);
+                levelStone++;
+                UpgradeExpensionDisplay(art);
             }
-            else if (art == 3)
+        }
+        else if (art == 3)
+        {
+            if (player.GetComponent<PlayerInventar>().playerMetal >= levelMetalExpension)
             {
-                if (player.GetComponent<PlayerInventar>().playerMetal >= levelMetalExpension)
-                {
-                    ByingHouses(art);
-                    SubtractFabric(art, levelMetalExpension, 1);
-                    levelMetal++;
-                    UpgradeExpensionDisplay(art);
-                }
+                ByingHouses(art);
+                SubtractFabric(art, levelMetalExpension, 1);
+                levelMetal++;
+                UpgradeExpensionDisplay(art);
             }
+        }
     }
 
     public void InventarWorkmenTest(int art)                 //InventarTestenArbeiter
@@ -308,6 +297,4 @@ public class Bying : MonoBehaviour                  //Kaufen
     {
         player.GetComponent<MoneyProduction>().WorkmenByings(byingWorkmenFabric);
     }
-
-
 }

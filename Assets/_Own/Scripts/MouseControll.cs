@@ -6,12 +6,12 @@ public class MouseControll : MonoBehaviour
 {
     public static GameObject ChoosenBuilding;
 
-    private MoneyProduction moneyProductIon;
+    private MoneyProduction moneyProduction;
     private CanvasManager canvasManager;
 
     private void Start()
     {
-        moneyProductIon = GameObject.FindWithTag("GameManager").GetComponent<MoneyProduction>();
+        moneyProduction = GameObject.FindWithTag("GameManager").GetComponent<MoneyProduction>();
         canvasManager = GameObject.FindWithTag("GameManager").GetComponent<CanvasManager>();
     }
 
@@ -85,10 +85,11 @@ public class MouseControll : MonoBehaviour
         canvasManager.Image.SetActive(false);
         canvasManager.MaxBuilding.SetActive(false);
         canvasManager.Shop.SetActive(false);
+        canvasManager.GetResources.SetActive(false);
     }
 
-    public void UpgradeButton(int buildingNumber)
-    {
-        moneyProductIon.Extensions(buildingNumber);
-    }
+    //public void UpgradeButton(int buildingNumber)
+    //{
+    //    moneyProduction.Extensions(buildingNumber);
+    //}
 }

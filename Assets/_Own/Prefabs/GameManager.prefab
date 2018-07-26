@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114651928517187688}
   - component: {fileID: 114374127439648556}
   - component: {fileID: 114260922359153826}
+  - component: {fileID: 114581390153333964}
+  - component: {fileID: 114178010192718422}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -44,6 +46,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114178010192718422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4e75d55992f154d940d998bcaff74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1116883311032572}
+  playerMoney: 0
+  playerWood: 0
+  playerStone: 0
+  playerMetal: 0
+  PlayerMoneyText: {fileID: 0}
+  PlayerWoodText: {fileID: 0}
+  PlayerStoneText: {fileID: 0}
+  PlayerMetalText: {fileID: 0}
+  canvasManager: {fileID: 0}
 --- !u!114 &114236735532840142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,12 +131,31 @@ MonoBehaviour:
   workmenWood: 0
   workmenStone: 0
   workmenMetal: 0
-  correctionText: {fileID: 0}
   farmHouse: {fileID: 1264495002840182, guid: c4e5aec2e8385e14c87b09fb50a088b2, type: 2}
   farm: {fileID: 1070376048457426, guid: c7e4218c9665d9d4c814a2d1b2e77d5f, type: 2}
   house: {fileID: 1171880707528774, guid: def6f2532b88ae6468c136fb178c58ef, type: 2}
   tower: {fileID: 1808734084821978, guid: 4c07e95cb3a58e146b5bea5d8a6baae1, type: 2}
   choosenHouse: {fileID: 0}
+--- !u!114 &114581390153333964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde452a7e977f0498793ad604b6250c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1116883311032572}
+  ExpensionMoneyText: {fileID: 0}
+  ExpensionWoodText: {fileID: 0}
+  ExpensionStoneText: {fileID: 0}
+  ExpensionMetalText: {fileID: 0}
+  WorkmenExpensionMoneyText: {fileID: 0}
+  WorkmenExpensionWoodText: {fileID: 0}
+  WorkmenExpensionStoneText: {fileID: 0}
+  WorkmenExpensionMetalText: {fileID: 0}
 --- !u!114 &114651928517187688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,6 +175,7 @@ MonoBehaviour:
   NewBuilding: {fileID: 0}
   MaxBuilding: {fileID: 0}
   Shop: {fileID: 0}
+  GetResources: {fileID: 0}
 --- !u!114 &114688859721442894
 MonoBehaviour:
   m_ObjectHideFlags: 1

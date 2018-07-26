@@ -30,70 +30,48 @@ public class PlayerInventar : MonoBehaviour                 //SpielerInventar
     public Text PlayerWoodText;
     public Text PlayerStoneText;
     public Text PlayerMetalText;
-    public Text ActivationText;
+
+    public CanvasManager canvasManager;
 
     private void Start()
     {
-        ActivationText.text = "";
+        canvasManager = GameObject.FindWithTag("GameManager").GetComponent<CanvasManager>();
     }
 
     private void Update()
-    {
-         
+    {      
         PlayerMoneyText.text = "Money: " + playerMoney.ToString();
         PlayerWoodText.text = "Wood: " + playerWood.ToString();
         PlayerStoneText.text = "Stone: " + playerStone.ToString();
         PlayerMetalText.text = "Metal: " + playerMetal.ToString();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            canvasManager.GetResources.SetActive(true);
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    public void ResourcesToPlayer(int resource)
     {
-        if (other.CompareTag("bank"))
+        if(resource == 0)
         {
-            ActivationText.text = "Drücke E um das Geld einzusammeln.";
-        }
-        if (other.CompareTag("holzfäller"))
-        {
-            ActivationText.text = "Drücke E um das Holz einzusammeln";
-        }
-        if (other.CompareTag("steinmetz"))
-        {
-            ActivationText.text = "Drücke E um den Stein einzusammeln";
-        }
-        if (other.CompareTag("fabrik"))
-        {
-            ActivationText.text = "Drücke E um das Metall einzusammeln";
-        }
-        
-        if (Input.GetKeyDown("e"))
-        {
-
-            if (other.CompareTag("bank"))
-            {
                 playerMoney = playerMoney + player.GetComponent<MoneyProduction>().Money;
                 player.GetComponent<MoneyProduction>().Money = 0;
-            }
-            if (other.CompareTag("holzfäller"))
-            {
+        }
+        else if(resource == 1)
+        {
                 playerWood = playerWood + player.GetComponent<MoneyProduction>().Wood;
                 player.GetComponent<MoneyProduction>().Wood = 0;
-            }
-            if (other.CompareTag("steinmetz"))
-            {
+        }
+        else if(resource == 2)
+        {
                 playerStone = playerStone + player.GetComponent<MoneyProduction>().Stone;
                 player.GetComponent<MoneyProduction>().Stone = 0;
-            }
-            if (other.CompareTag("fabrik"))
-            {
+        }
+        else if(resource == 3)
+        {
                 playerMetal = playerMetal + player.GetComponent<MoneyProduction>().Metal;
                 player.GetComponent<MoneyProduction>().Metal = 0;
-            }  
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        ActivationText.text = "";
-    }
-
 }

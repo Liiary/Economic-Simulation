@@ -68,7 +68,6 @@ public class BuildBuilding : MonoBehaviour
         Build(1);
         Build(2);
         Build(3);
-
     }
 
     public void Build(int buildingNumber)

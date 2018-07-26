@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class MoneyProduction : MonoBehaviour                        //GeldProduzieren
 {
-
     //public Text GeldText;
     //public Text HolzText;
     //public Text SteinText;
@@ -19,7 +18,7 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
     //public int zusatzHolz;
     //public int zusatzStein;
     //public int zusatzMetal;
-    //public int erweiterungenGeld=0;
+    //public int erweiterungenGeld = 0;
     //public int erweiterungenHolz = 0;
     //public int erweiterungenStein = 0;
     //public int erweiterungenMetal = 0;
@@ -57,16 +56,14 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
     public int extraWood;
     public int extraStone;
     public int extraMetal;
-    public int LevelMoney = 0;
-    public int LevelWood = 0;
-    public int LevelStone = 0;
-    public int LevelMetal = 0;
+    public int LevelMoney;
+    public int LevelWood;
+    public int LevelStone;
+    public int LevelMetal;
     public int workmenMoney;
     public int workmenWood;
     public int workmenStone;
     public int workmenMetal;
-
-    public Text correctionText;
 
     private BuildBuilding buildBuilding;
     private UpgradeBuilding upgradeFarmHouse;
@@ -97,14 +94,23 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         StartCoroutine(Quarring());
         StartCoroutine(Forging());
 
+        extraMoney++;
+        extraWood++;
+        extraStone++;
+        extraMetal++;
+
+        LevelMoney++;
+        LevelWood++;
+        LevelStone++;
+        LevelMetal++;
     }
 
     private void Update()
     {
-        MoneyText.text = Money.ToString();
-        WoodText.text = Wood.ToString();
-        StoneText.text = Stone.ToString();
-        MetalText.text = Metal.ToString();
+        MoneyText.text = "Money: " + Money.ToString();
+        WoodText.text = "Wood: " + Wood.ToString();
+        StoneText.text = "Stone: " + Stone.ToString();
+        MetalText.text = "Metal: " + Metal.ToString();
     }
 
     public void AddMixtures(int addMixture)             //public void Zusätze(int stoff)

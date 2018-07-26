@@ -12,4 +12,5 @@ public class CanvasManager : MonoBehaviour
     public GameObject NewBuilding;
     public GameObject MaxBuilding;
     public GameObject Shop;
+    public GameObject GetResources;
 }
