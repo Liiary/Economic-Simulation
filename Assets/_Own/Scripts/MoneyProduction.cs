@@ -27,6 +27,7 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
     public int workmenStone;
     public int workmenHay;
 
+    private CanvasManager canvasManager;
     private BuildBuilding buildBuilding;
     private UpgradeBuilding upgradeFarmHouse;
     private UpgradeBuilding upgradeFarm;
@@ -45,6 +46,8 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
 
     private void Start()
     {
+        canvasManager = GameObject.FindWithTag("GameManager").GetComponent<CanvasManager>();
+
         buildBuilding = GetComponent<BuildBuilding>();
         upgradeFarmHouse = farmHouse.GetComponent<UpgradeBuilding>();
         upgradeFarm = farm.GetComponent<UpgradeBuilding>();
@@ -108,6 +111,9 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
             LevelMoney++;
             if (choosenHouse.extensionMoney == 7)
             {
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.UpgradeFarmHouse.SetActive(false);
                 choosenHouse.extensionMoney = 0;
                 AddMixtures(extension);
             }
@@ -118,6 +124,9 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
             LevelWood++;
             if (choosenHouse.extensionWood == 7)
             {
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.UpgradeFarm.SetActive(false);
                 choosenHouse.extensionWood = 0;
                 AddMixtures(extension);
             }
@@ -128,6 +137,9 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
             LevelStone++;
             if (choosenHouse.extensionStone == 7)
             {
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.UpgradeHouse.SetActive(false);
                 choosenHouse.extensionStone = 0;
                 AddMixtures(extension);
             }
@@ -138,6 +150,9 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
             LevelHay++;
             if (choosenHouse.extensionHay == 7)
             {
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.UpgradeTower.SetActive(false);
                 choosenHouse.extensionHay = 0;
                 AddMixtures(extension);
             }

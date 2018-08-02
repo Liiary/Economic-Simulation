@@ -7,13 +7,13 @@ public class MouseControll : MonoBehaviour
     public static bool canvasOn;
     public static GameObject ChoosenBuilding;
 
+    private bool musicOn = true;
     private bool gameRules;
     private MoneyProduction moneyProduction;
     private CanvasManager canvasManager;
 
     private void Start()
     {
-        Time.timeScale = 0;
         canvasOn = false;
         moneyProduction = GameObject.FindWithTag("GameManager").GetComponent<MoneyProduction>();
         canvasManager = GameObject.FindWithTag("GameManager").GetComponent<CanvasManager>();
@@ -24,7 +24,6 @@ public class MouseControll : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             canvasManager.GameRules.SetActive(false);
-            Time.timeScale = 1;
             gameRules = false;
         }
 
@@ -43,7 +42,7 @@ public class MouseControll : MonoBehaviour
                 canvasManager.NewBuilding.SetActive(true);
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.E))
             {
                 canvasOn = true;
                 canvasManager.Shop.SetActive(true);
@@ -101,6 +100,21 @@ public class MouseControll : MonoBehaviour
                     canvasManager.MaxBuilding.SetActive(true);
                 }
             }
+        }
+    }
+
+    public void TurnMusicOffOn()
+    {
+        GameObject music = GameObject.FindWithTag("Musicbox");
+        if (musicOn)
+        {
+            musicOn = false;
+            music.GetComponent<AudioSource>().enabled = false;
+        }
+        else
+        {
+            musicOn = true;
+            music.GetComponent<AudioSource>().enabled = true;
         }
     }
 

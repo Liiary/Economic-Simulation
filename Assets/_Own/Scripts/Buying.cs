@@ -55,6 +55,13 @@ public class Buying : MonoBehaviour                  //Kaufen
     public Text WorkmenExpensionStoneText;
     public Text WorkmenExpensionHayText;
 
+    private CanvasManager canvasManager;
+
+    private void Start()
+    {
+        canvasManager = GameObject.FindWithTag("GameManager").GetComponent<CanvasManager>();
+    }
+
     public void UpdateExpensionDisplay(int upgradeDisplayFabric)                  //UpgradeKostenAnzeige
     {
         if (upgradeDisplayFabric == 0)
@@ -320,7 +327,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
     }
 
-    public void BuyingNewBuildingText(int art)
+    public void BuyingNewBuildingTest(int art)
     {
         if (art == 0)
         {
@@ -331,6 +338,10 @@ public class Buying : MonoBehaviour                  //Kaufen
                 levelMoney++;
                 UpdateNewBuildingDisplay(art);
                 UpdateExpensionDisplay(art);
+
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.NewBuilding.SetActive(false);
             }
         }
         else if (art == 1)
@@ -342,6 +353,10 @@ public class Buying : MonoBehaviour                  //Kaufen
                 levelWood++;
                 UpdateNewBuildingDisplay(art);
                 UpdateExpensionDisplay(art);
+
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.NewBuilding.SetActive(false);
             }
         }
         else if (art == 2)
@@ -353,6 +368,10 @@ public class Buying : MonoBehaviour                  //Kaufen
                 levelStone++;
                 UpdateNewBuildingDisplay(art);
                 UpdateExpensionDisplay(art);
+
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.NewBuilding.SetActive(false);
             }
         }
         else if (art == 3)
@@ -364,6 +383,10 @@ public class Buying : MonoBehaviour                  //Kaufen
                 levelHay++;
                 UpdateNewBuildingDisplay(art);
                 UpdateExpensionDisplay(art);
+
+                MouseControll.canvasOn = false;
+                canvasManager.Image.SetActive(false);
+                canvasManager.NewBuilding.SetActive(false);
             }
         }
     }
