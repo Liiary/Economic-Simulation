@@ -24,12 +24,12 @@ public class PlayerInventar : MonoBehaviour                 //SpielerInventar
     public int playerMoney;
     public int playerWood;
     public int playerStone;
-    public int playerMetal;
+    public int playerHay;
 
     public Text PlayerMoneyText;
     public Text PlayerWoodText;
     public Text PlayerStoneText;
-    public Text PlayerMetalText;
+    public Text PlayerHayText;
 
     public CanvasManager canvasManager;
 
@@ -43,7 +43,7 @@ public class PlayerInventar : MonoBehaviour                 //SpielerInventar
         PlayerMoneyText.text = "Money: " + playerMoney.ToString();
         PlayerWoodText.text = "Wood: " + playerWood.ToString();
         PlayerStoneText.text = "Stone: " + playerStone.ToString();
-        PlayerMetalText.text = "Metal: " + playerMetal.ToString();
+        PlayerHayText.text = "Hay: " + playerHay.ToString();
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -70,8 +70,8 @@ public class PlayerInventar : MonoBehaviour                 //SpielerInventar
         }
         else if(resource == 3)
         {
-                playerMetal = playerMetal + player.GetComponent<MoneyProduction>().Metal;
-                player.GetComponent<MoneyProduction>().Metal = 0;
+                playerHay = playerHay + player.GetComponent<MoneyProduction>().Hay;
+                player.GetComponent<MoneyProduction>().Hay = 0;
         }
     }
 }

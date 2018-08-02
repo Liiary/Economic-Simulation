@@ -7,5 +7,5 @@ public class HouseScript : MonoBehaviour                    //Häuser
     public int extensionMoney = 0;
     public int extensionWood = 0;
     public int extensionStone = 0;
-    public int extensionMetal = 0;
+    public int extensionHay = 0;
 }

@@ -46,24 +46,24 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
     public Text MoneyText;
     public Text WoodText;
     public Text StoneText;
-    public Text MetalText;
+    public Text HayText;
 
     public int Money;
     public int Wood;
     public int Stone;
-    public int Metal;
+    public int Hay;
     public int extraMoney;
     public int extraWood;
     public int extraStone;
-    public int extraMetal;
+    public int extraHay;
     public int LevelMoney;
     public int LevelWood;
     public int LevelStone;
-    public int LevelMetal;
+    public int LevelHay;
     public int workmenMoney;
     public int workmenWood;
     public int workmenStone;
-    public int workmenMetal;
+    public int workmenHay;
 
     private BuildBuilding buildBuilding;
     private UpgradeBuilding upgradeFarmHouse;
@@ -97,12 +97,12 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         extraMoney++;
         extraWood++;
         extraStone++;
-        extraMetal++;
+        extraHay++;
 
         LevelMoney++;
         LevelWood++;
         LevelStone++;
-        LevelMetal++;
+        LevelHay++;
     }
 
     private void Update()
@@ -110,7 +110,7 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         MoneyText.text = "Money: " + Money.ToString();
         WoodText.text = "Wood: " + Wood.ToString();
         StoneText.text = "Stone: " + Stone.ToString();
-        MetalText.text = "Metal: " + Metal.ToString();
+        HayText.text = "Hay: " + Hay.ToString();
     }
 
     public void AddMixtures(int addMixture)             //public void Zusätze(int stoff)
@@ -133,7 +133,7 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         else if (addMixture == 3)
         {
             buildBuilding.Build(addMixture);
-            extraMetal++;
+            extraHay++;
         }
     }
 
@@ -173,16 +173,16 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         else if (extension == 3)
         {
             upgradeTower.Upgrade(extension);
-            LevelMetal++;
-            if (choosenHouse.extensionMetal == 7)
+            LevelHay++;
+            if (choosenHouse.extensionHay == 7)
             {
-                choosenHouse.extensionMetal = 0;
+                choosenHouse.extensionHay = 0;
                 AddMixtures(extension);
             }
         }
     }
 
-    public void WorkmenByings(int workmenBying)                 //public void ArbeiterKaufen(int stoff)
+    public void WorkmenBuyings(int workmenBying)                 //public void ArbeiterKaufen(int stoff)
     {
         if (workmenBying == 0)
         {
@@ -198,7 +198,31 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         }
         else if (workmenBying == 3)
         {
-            workmenMetal++;
+            workmenHay++;
+        }
+    }
+
+    public void NewBuilding(int building)
+    {
+        if (building == 0)
+        {
+            AddMixtures(building);
+            LevelMoney++;
+        }
+        else if (building == 1)
+        {
+            AddMixtures(building);
+            LevelWood++;
+        }
+        else if (building == 2)
+        {
+            AddMixtures(building);
+            LevelStone++;
+        }
+        else if (building == 3)
+        {
+            AddMixtures(building);
+            LevelHay++;
         }
     }
 
@@ -222,7 +246,7 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
     }
     IEnumerator Forging()                 //Schmieden
     {
-        Metal = Metal + extraMetal * LevelMetal * workmenMetal;
+        Hay = Hay + extraHay * LevelHay * workmenHay;
         yield return new WaitForSeconds(1);
         StartCoroutine(Forging());
     }

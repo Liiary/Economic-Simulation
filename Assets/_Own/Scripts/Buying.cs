@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bying : MonoBehaviour                  //Kaufen
+public class Buying : MonoBehaviour                  //Kaufen
 {
     //public GameObject player;
 
@@ -52,50 +52,75 @@ public class Bying : MonoBehaviour                  //Kaufen
     int levelMoneyExpension;
     int levelWoodExpension;
     int levelStoneExpension;
-    int levelMetalExpension;
+    int levelHayExpension;
 
     int workmenMoneyExpension;
     int workmenWoodExpension;
     int workmenStoneExpension;
-    int workmenMetalExpension;
+    int workmenHayExpension;
 
     int levelMoney;
     int levelWood;
     int levelStone;
-    int levelMetal;
+    int levelHay;
 
     int workmensMoney;
     int workmensWood;
     int workmensStone;
-    int workmensMetal;
+    int workmensHay;
 
     public Text ExpensionMoneyText;
     public Text ExpensionWoodText;
     public Text ExpensionStoneText;
-    public Text ExpensionMetalText;
+    public Text ExpensionHayText;
+
+    public Text NewFarmHouseText;
+    public Text NewFarmText;
+    public Text NewHouseText;
+    public Text NewTowerText;
 
     public Text WorkmenExpensionMoneyText;
     public Text WorkmenExpensionWoodText;
     public Text WorkmenExpensionStoneText;
-    public Text WorkmenExpensionMetalText;
+    public Text WorkmenExpensionHayText;
 
-    public void UpgradeExpensionDisplay(int upgradeDisplayFabric)                  //UpgradeKostenAnzeige
+    public void UpdateExpensionDisplay(int upgradeDisplayFabric)                  //UpgradeKostenAnzeige
     {
         if (upgradeDisplayFabric == 0)
         {
-            ExpensionMoneyText.text = "Geld: " + levelMoneyExpension.ToString();
+            ExpensionMoneyText.text = "Money: " + levelMoneyExpension.ToString();
         }
         else if (upgradeDisplayFabric == 1)
         {
-            ExpensionWoodText.text = "Holz: " + levelWoodExpension.ToString();
+            ExpensionWoodText.text = "Wood: " + levelWoodExpension.ToString();
         }
         else if (upgradeDisplayFabric == 2)
         {
-            ExpensionStoneText.text = "Stein: " + levelStoneExpension.ToString();
+            ExpensionStoneText.text = "Stone: " + levelStoneExpension.ToString();
         }
         else if (upgradeDisplayFabric == 3)
         {
-            ExpensionMetalText.text = "Metal: " + levelMetalExpension.ToString();
+            ExpensionHayText.text = "Hay: " + levelHayExpension.ToString();
+        }
+    }
+
+    public void UpdateNewBuildingDisplay(int updateDisplay)
+    {
+        if (updateDisplay == 0)
+        {
+            NewFarmHouseText.text = "Money: " + levelMoneyExpension.ToString();
+        }
+        else if (updateDisplay == 1)
+        {
+            NewFarmText.text = "Wood: " + levelWoodExpension.ToString();
+        }
+        else if (updateDisplay == 2)
+        {
+            NewHouseText.text = "Stone: " + levelStoneExpension.ToString();
+        }
+        else if (updateDisplay == 3)
+        {
+            NewTowerText.text = "Hay: " + levelHayExpension.ToString();
         }
     }
 
@@ -103,19 +128,19 @@ public class Bying : MonoBehaviour                  //Kaufen
     {
         if (workmenDispayFabric == 0)
         {
-            WorkmenExpensionMoneyText.text = "Geld: " + workmenMoneyExpension.ToString();
+            WorkmenExpensionMoneyText.text = "Money: " + workmenMoneyExpension.ToString();
         }
         else if (workmenDispayFabric == 1)
         {
-            WorkmenExpensionWoodText.text = "Holz: " + workmenWoodExpension.ToString();
+            WorkmenExpensionWoodText.text = "Wood: " + workmenWoodExpension.ToString();
         }
         else if (workmenDispayFabric == 2)
         {
-            WorkmenExpensionStoneText.text = "Stein: " + workmenStoneExpension.ToString();
+            WorkmenExpensionStoneText.text = "Stone: " + workmenStoneExpension.ToString();
         }
         else if (workmenDispayFabric == 3)
         {
-            WorkmenExpensionMetalText.text = "Metal: " + workmenMetalExpension.ToString();
+            WorkmenExpensionHayText.text = "Hay: " + workmenHayExpension.ToString();
         }
     }
 
@@ -144,9 +169,9 @@ public class Bying : MonoBehaviour                  //Kaufen
         }
         else if (subtractFabric == 3)//Metal
         {
-            inventar = player.GetComponent<PlayerInventar>().playerMetal;
+            inventar = player.GetComponent<PlayerInventar>().playerHay;
             inventar = inventar - expension;
-            player.GetComponent<PlayerInventar>().playerMetal = inventar;
+            player.GetComponent<PlayerInventar>().playerHay = inventar;
 
         }
         ExpensionAddition(subtractFabric, workUpgrade);
@@ -191,11 +216,11 @@ public class Bying : MonoBehaviour                  //Kaufen
         {
             if (upgradeWorkmen == 1)
             {
-                levelMetalExpension = levelMetalExpension + 100 * levelMetal;
+                levelHayExpension = levelHayExpension + 100 * levelHay;
             }
             else
             {
-                workmenMetalExpension = workmenMetalExpension + 100 * workmensMetal;
+                workmenHayExpension = workmenHayExpension + 100 * workmensHay;
             }
         }
     }
@@ -206,40 +231,44 @@ public class Bying : MonoBehaviour                  //Kaufen
         {
             if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
             {
-                ByingHouses(art);
+                BuyingHouses(art);
                 SubtractFabric(art, levelMoneyExpension, 1);
                 levelMoney++;
-                UpgradeExpensionDisplay(art);
+                UpdateExpensionDisplay(art);
+                UpdateNewBuildingDisplay(art);
             }
         }
         else if (art == 1)
         {
             if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
             {
-                ByingHouses(art);
+                BuyingHouses(art);
                 SubtractFabric(art, levelWoodExpension, 1);
                 levelWood++;
-                UpgradeExpensionDisplay(art);
+                UpdateExpensionDisplay(art);
+                UpdateNewBuildingDisplay(art);
             }
         }
         else if (art == 2)
         {
             if (player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
             {
-                ByingHouses(art);
+                BuyingHouses(art);
                 SubtractFabric(art, levelStoneExpension, 1);
                 levelStone++;
-                UpgradeExpensionDisplay(art);
+                UpdateExpensionDisplay(art);
+                UpdateNewBuildingDisplay(art);
             }
         }
         else if (art == 3)
         {
-            if (player.GetComponent<PlayerInventar>().playerMetal >= levelMetalExpension)
+            if (player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
             {
-                ByingHouses(art);
-                SubtractFabric(art, levelMetalExpension, 1);
-                levelMetal++;
-                UpgradeExpensionDisplay(art);
+                BuyingHouses(art);
+                SubtractFabric(art, levelHayExpension, 1);
+                levelHay++;
+                UpdateExpensionDisplay(art);
+                UpdateNewBuildingDisplay(art);
             }
         }
     }
@@ -250,7 +279,7 @@ public class Bying : MonoBehaviour                  //Kaufen
         {
             if (player.GetComponent<PlayerInventar>().playerMoney >= workmenMoneyExpension)
             {
-                ByingWorkmen(art);
+                BuyingWorkmen(art);
                 SubtractFabric(art, workmenMoneyExpension, 0);
                 workmensMoney++;
                 WorkmenExpensionDisplay(art);
@@ -260,7 +289,7 @@ public class Bying : MonoBehaviour                  //Kaufen
         {
             if (player.GetComponent<PlayerInventar>().playerWood >= workmenWoodExpension)
             {
-                ByingWorkmen(art);
+                BuyingWorkmen(art);
                 SubtractFabric(art, workmenWoodExpension, 0);
                 workmensWood++;
                 WorkmenExpensionDisplay(art);
@@ -270,7 +299,7 @@ public class Bying : MonoBehaviour                  //Kaufen
         {
             if (player.GetComponent<PlayerInventar>().playerStone >= workmenStoneExpension)
             {
-                ByingWorkmen(art);
+                BuyingWorkmen(art);
                 SubtractFabric(art, workmenStoneExpension, 0);
                 workmensStone++;
                 WorkmenExpensionDisplay(art);
@@ -278,23 +307,76 @@ public class Bying : MonoBehaviour                  //Kaufen
         }
         else if (art == 3)
         {
-            if (player.GetComponent<PlayerInventar>().playerMetal >= workmenMetalExpension)
+            if (player.GetComponent<PlayerInventar>().playerHay >= workmenHayExpension)
             {
-                ByingWorkmen(art);
-                SubtractFabric(art, workmenMetalExpension, 0);
-                workmensMetal++;
+                BuyingWorkmen(art);
+                SubtractFabric(art, workmenHayExpension, 0);
+                workmensHay++;
                 WorkmenExpensionDisplay(art);
             }
         }
     }
 
-    public void ByingHouses(int byingHousesFabric)
+    public void BuyingNewBuildingText(int art)
     {
-        player.GetComponent<MoneyProduction>().Extensions(byingHousesFabric);
+        if (art == 0)
+        {
+            if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
+            {
+                BuyingNewBuildings(art);
+                SubtractFabric(art, levelMoneyExpension, 1);
+                levelMoney++;
+                UpdateNewBuildingDisplay(art);
+                UpdateExpensionDisplay(art);
+            }
+        }
+        else if (art == 1)
+        {
+            if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
+            {
+                BuyingNewBuildings(art);
+                SubtractFabric(art, levelWoodExpension, 1);
+                levelWood++;
+                UpdateNewBuildingDisplay(art);
+                UpdateExpensionDisplay(art);
+            }
+        }
+        else if (art == 2)
+        {
+            if (player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
+            {
+                BuyingNewBuildings(art);
+                SubtractFabric(art, levelStoneExpension, 1);
+                levelStone++;
+                UpdateNewBuildingDisplay(art);
+                UpdateExpensionDisplay(art);
+            }
+        }
+        else if (art == 3)
+        {
+            if (player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
+            {
+                BuyingNewBuildings(art);
+                SubtractFabric(art, levelHayExpension, 1);
+                levelHay++;
+                UpdateNewBuildingDisplay(art);
+                UpdateExpensionDisplay(art);
+            }
+        }
     }
 
-    public void ByingWorkmen(int byingWorkmenFabric)
+    public void BuyingNewBuildings(int buyingBuildingFabric)
     {
-        player.GetComponent<MoneyProduction>().WorkmenByings(byingWorkmenFabric);
+        player.GetComponent<MoneyProduction>().NewBuilding(buyingBuildingFabric);
+    }
+
+    public void BuyingHouses(int buyingHousesFabric)
+    {
+        player.GetComponent<MoneyProduction>().Extensions(buyingHousesFabric);
+    }
+
+    public void BuyingWorkmen(int buyingWorkmenFabric)
+    {
+        player.GetComponent<MoneyProduction>().WorkmenBuyings(buyingWorkmenFabric);
     }
 }

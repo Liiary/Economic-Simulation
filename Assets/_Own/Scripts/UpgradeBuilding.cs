@@ -90,16 +90,16 @@ public class UpgradeBuilding : MonoBehaviour
             GameObject tower = MouseControll.ChoosenBuilding.gameObject;
             choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
-            if (choosenHouse.extensionMetal >= 6)
+            if (choosenHouse.extensionHay >= 6)
             {
-                choosenHouse.extensionMetal++;
+                choosenHouse.extensionHay++;
                 tower.transform.gameObject.tag = "BuildingMax";
             }
             else
             {
-                tower.transform.GetChild(choosenHouse.extensionMetal).GetComponent<MeshRenderer>().enabled = false;
-                choosenHouse.extensionMetal++;
-                tower.transform.GetChild(choosenHouse.extensionMetal).GetComponent<MeshRenderer>().enabled = true;
+                tower.transform.GetChild(choosenHouse.extensionHay).GetComponent<MeshRenderer>().enabled = false;
+                choosenHouse.extensionHay++;
+                tower.transform.GetChild(choosenHouse.extensionHay).GetComponent<MeshRenderer>().enabled = true;
             }
         }
     }

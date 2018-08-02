@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222242165522434048}
   - component: {fileID: 114969142803259050}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BuildHouseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 222619936410024822}
   - component: {fileID: 114772673926890420}
   m_Layer: 5
-  m_Name: StoredMetalText
+  m_Name: StoredHayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 222082126117578164}
   - component: {fileID: 114242677677675160}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BuildTowerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 222264741496314350}
   - component: {fileID: 114233323593981290}
   m_Layer: 5
-  m_Name: GetMetalText
+  m_Name: GetHayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 114619324010472694}
   - component: {fileID: 114883461025133802}
   m_Layer: 5
-  m_Name: GetMetalButton
+  m_Name: GetHayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 222800153259710554}
   - component: {fileID: 114504627254113908}
   m_Layer: 5
-  m_Name: InventarMetalText
+  m_Name: InventarHayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 222164920517915996}
   - component: {fileID: 114947663251877232}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BuildFarmHouseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 222815132994284688}
   - component: {fileID: 114484012829884234}
   m_Layer: 5
-  m_Name: MetalWorkersText
+  m_Name: HayWorkersText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 222502815790436812}
   - component: {fileID: 114147306633711342}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BuildFarmText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 114648007888466538}
   - component: {fileID: 114770032657704418}
   m_Layer: 5
-  m_Name: MetalWorkersButton
+  m_Name: HayWorkersButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2047,7 +2047,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: Build
+        m_MethodName: BuyingNewBuildingText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2153,7 +2153,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: Build
+        m_MethodName: BuyingNewBuildingText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2455,7 +2455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: Build
+        m_MethodName: BuyingNewBuildingText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2685,7 +2685,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: Build
+        m_MethodName: BuyingNewBuildingText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

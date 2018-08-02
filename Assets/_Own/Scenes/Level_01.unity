@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2424500 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114947663251877232, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 795637872}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &23806985
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,72 +406,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114883461025133802, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670831}
-    - target: {fileID: 114553822773161392, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670831}
-    - target: {fileID: 114784652389637802, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670831}
-    - target: {fileID: 114055313016130828, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670831}
-    - target: {fileID: 114758983212950564, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670830}
-    - target: {fileID: 114806427735821396, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670830}
-    - target: {fileID: 114350892381309608, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1072629266}
-    - target: {fileID: 114523481339597486, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1072629266}
-    - target: {fileID: 114414825147099490, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1072629266}
-    - target: {fileID: 114601247631465432, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1072629266}
-    - target: {fileID: 114815681469685206, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670830}
-    - target: {fileID: 114296953720101444, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670830}
-    - target: {fileID: 114770032657704418, guid: 8d854cfb33b677e43bb50adfe37d88aa,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686670830}
-    - target: {fileID: 114306939853846432, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    - target: {fileID: 114950138081878510, guid: 8d854cfb33b677e43bb50adfe37d88aa,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -475,11 +416,76 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 686670830}
-    - target: {fileID: 114950138081878510, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    - target: {fileID: 114306939853846432, guid: 8d854cfb33b677e43bb50adfe37d88aa,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 686670830}
+    - target: {fileID: 114770032657704418, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114296953720101444, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114815681469685206, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114601247631465432, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114414825147099490, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114523481339597486, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114350892381309608, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114806427735821396, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114758983212950564, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670830}
+    - target: {fileID: 114055313016130828, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670831}
+    - target: {fileID: 114784652389637802, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670831}
+    - target: {fileID: 114553822773161392, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670831}
+    - target: {fileID: 114883461025133802, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686670831}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d854cfb33b677e43bb50adfe37d88aa, type: 2}
   m_IsPrefabParent: 0
@@ -499,17 +505,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 795637872}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &946198207 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114242677677675160, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 795637872}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &956097038 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1403863492230122, guid: 8d854cfb33b677e43bb50adfe37d88aa,
     type: 2}
   m_PrefabInternal: {fileID: 795637872}
---- !u!114 &1072629266 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114688859721442894, guid: 14df5e3501ce6ce4f89f95aab2748999,
-    type: 2}
-  m_PrefabInternal: {fileID: 1842408372}
-  m_Script: {fileID: 11500000, guid: 205c7b41b2f06c54b85980e20e9ba8e1, type: 3}
 --- !u!1 &1210902296 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1438395427045732, guid: 8d854cfb33b677e43bb50adfe37d88aa,
@@ -518,6 +524,12 @@ GameObject:
 --- !u!114 &1221916557 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114593873428215494, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 795637872}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1257422850 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114969142803259050, guid: 8d854cfb33b677e43bb50adfe37d88aa,
     type: 2}
   m_PrefabInternal: {fileID: 795637872}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -581,6 +593,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1836714411152702, guid: 8d854cfb33b677e43bb50adfe37d88aa,
     type: 2}
   m_PrefabInternal: {fileID: 795637872}
+--- !u!114 &1527967179 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114147306633711342, guid: 8d854cfb33b677e43bb50adfe37d88aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 795637872}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1556394183 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114102865134894602, guid: 8d854cfb33b677e43bb50adfe37d88aa,
@@ -769,66 +787,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
-      propertyPath: PlayerMoneyText
+      propertyPath: MoneyText
       value: 
-      objectReference: {fileID: 1985002847}
-    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+      objectReference: {fileID: 538850380}
+    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
-      propertyPath: PlayerWoodText
+      propertyPath: WoodText
       value: 
-      objectReference: {fileID: 261278097}
-    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+      objectReference: {fileID: 1221916557}
+    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
-      propertyPath: PlayerStoneText
+      propertyPath: StoneText
       value: 
-      objectReference: {fileID: 273045881}
-    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+      objectReference: {fileID: 471092202}
+    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
-      propertyPath: PlayerMetalText
+      propertyPath: HayText
       value: 
-      objectReference: {fileID: 220252274}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: ExpensionMoneyText
-      value: 
-      objectReference: {fileID: 1556394183}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: ExpensionWoodText
-      value: 
-      objectReference: {fileID: 94203152}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: ExpensionStoneText
-      value: 
-      objectReference: {fileID: 1694995454}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: ExpensionMetalText
-      value: 
-      objectReference: {fileID: 444970701}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: WorkmenExpensionMoneyText
-      value: 
-      objectReference: {fileID: 713923831}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: WorkmenExpensionWoodText
-      value: 
-      objectReference: {fileID: 465835362}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: WorkmenExpensionStoneText
-      value: 
-      objectReference: {fileID: 1300929460}
-    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: WorkmenExpensionMetalText
-      value: 
-      objectReference: {fileID: 1813909544}
+      objectReference: {fileID: 931722770}
     - target: {fileID: 114651928517187688, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
       propertyPath: Image
@@ -874,31 +852,91 @@ Prefab:
       propertyPath: GetResources
       value: 
       objectReference: {fileID: 832749439}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: ExpensionMoneyText
+      value: 
+      objectReference: {fileID: 1556394183}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: ExpensionWoodText
+      value: 
+      objectReference: {fileID: 94203152}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: ExpensionStoneText
+      value: 
+      objectReference: {fileID: 1694995454}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: ExpensionHayText
+      value: 
+      objectReference: {fileID: 444970701}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: NewFarmHouseText
+      value: 
+      objectReference: {fileID: 2424500}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: NewFarmText
+      value: 
+      objectReference: {fileID: 1527967179}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: NewHouseText
+      value: 
+      objectReference: {fileID: 1257422850}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: NewTowerText
+      value: 
+      objectReference: {fileID: 946198207}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: WorkmenExpensionMoneyText
+      value: 
+      objectReference: {fileID: 713923831}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: WorkmenExpensionWoodText
+      value: 
+      objectReference: {fileID: 465835362}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: WorkmenExpensionStoneText
+      value: 
+      objectReference: {fileID: 1300929460}
+    - target: {fileID: 114581390153333964, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: WorkmenExpensionHayText
+      value: 
+      objectReference: {fileID: 1813909544}
+    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: PlayerMoneyText
+      value: 
+      objectReference: {fileID: 1985002847}
+    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: PlayerWoodText
+      value: 
+      objectReference: {fileID: 261278097}
+    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: PlayerStoneText
+      value: 
+      objectReference: {fileID: 273045881}
+    - target: {fileID: 114178010192718422, guid: 14df5e3501ce6ce4f89f95aab2748999,
+        type: 2}
+      propertyPath: PlayerHayText
+      value: 
+      objectReference: {fileID: 220252274}
     - target: {fileID: 114688859721442894, guid: 14df5e3501ce6ce4f89f95aab2748999,
         type: 2}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1712776895}
-    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: MoneyText
-      value: 
-      objectReference: {fileID: 538850380}
-    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: WoodText
-      value: 
-      objectReference: {fileID: 1221916557}
-    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: StoneText
-      value: 
-      objectReference: {fileID: 471092202}
-    - target: {fileID: 114374127439648556, guid: 14df5e3501ce6ce4f89f95aab2748999,
-        type: 2}
-      propertyPath: MetalText
-      value: 
-      objectReference: {fileID: 931722770}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14df5e3501ce6ce4f89f95aab2748999, type: 2}
   m_IsPrefabParent: 0

@@ -61,11 +61,11 @@ MonoBehaviour:
   playerMoney: 0
   playerWood: 0
   playerStone: 0
-  playerMetal: 0
+  playerHay: 0
   PlayerMoneyText: {fileID: 0}
   PlayerWoodText: {fileID: 0}
   PlayerStoneText: {fileID: 0}
-  PlayerMetalText: {fileID: 0}
+  PlayerHayText: {fileID: 0}
   canvasManager: {fileID: 0}
 --- !u!114 &114236735532840142
 MonoBehaviour:
@@ -114,23 +114,23 @@ MonoBehaviour:
   MoneyText: {fileID: 0}
   WoodText: {fileID: 0}
   StoneText: {fileID: 0}
-  MetalText: {fileID: 0}
+  HayText: {fileID: 0}
   Money: 0
   Wood: 0
   Stone: 0
-  Metal: 0
+  Hay: 0
   extraMoney: 0
   extraWood: 0
   extraStone: 0
-  extraMetal: 0
+  extraHay: 0
   LevelMoney: 0
   LevelWood: 0
   LevelStone: 0
-  LevelMetal: 0
+  LevelHay: 0
   workmenMoney: 0
   workmenWood: 0
   workmenStone: 0
-  workmenMetal: 0
+  workmenHay: 0
   farmHouse: {fileID: 1264495002840182, guid: c4e5aec2e8385e14c87b09fb50a088b2, type: 2}
   farm: {fileID: 1070376048457426, guid: c7e4218c9665d9d4c814a2d1b2e77d5f, type: 2}
   house: {fileID: 1171880707528774, guid: def6f2532b88ae6468c136fb178c58ef, type: 2}
@@ -151,11 +151,15 @@ MonoBehaviour:
   ExpensionMoneyText: {fileID: 0}
   ExpensionWoodText: {fileID: 0}
   ExpensionStoneText: {fileID: 0}
-  ExpensionMetalText: {fileID: 0}
+  ExpensionHayText: {fileID: 0}
+  NewFarmHouseText: {fileID: 0}
+  NewFarmText: {fileID: 0}
+  NewHouseText: {fileID: 0}
+  NewTowerText: {fileID: 0}
   WorkmenExpensionMoneyText: {fileID: 0}
   WorkmenExpensionWoodText: {fileID: 0}
   WorkmenExpensionStoneText: {fileID: 0}
-  WorkmenExpensionMetalText: {fileID: 0}
+  WorkmenExpensionHayText: {fileID: 0}
 --- !u!114 &114651928517187688
 MonoBehaviour:
   m_ObjectHideFlags: 1
