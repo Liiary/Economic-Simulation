@@ -5,20 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerInventar : MonoBehaviour                 //SpielerInventar
 {
-
-    //public GameObject player;
-
-    //public int spielerGeld;
-    //public int spielerHolz;
-    //public int spielerStein;
-    //public int spielerMetal;
-
-    //public Text spielerGeldText;
-    //public Text spielerHolzText;
-    //public Text spielerSteinText;
-    //public Text spielerMetalText;
-    //public Text AktivierungsText;
-
     public GameObject player;
 
     public int playerMoney;
@@ -45,9 +31,13 @@ public class PlayerInventar : MonoBehaviour                 //SpielerInventar
         PlayerStoneText.text = "Stone: " + playerStone.ToString();
         PlayerHayText.text = "Hay: " + playerHay.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (!MouseControll.canvasOn)
         {
-            canvasManager.GetResources.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                MouseControll.canvasOn = true;
+                canvasManager.GetResources.SetActive(true);
+            }
         }
     }
 

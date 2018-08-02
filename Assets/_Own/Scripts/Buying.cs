@@ -5,44 +5,15 @@ using UnityEngine.UI;
 
 public class Buying : MonoBehaviour                  //Kaufen
 {
-    //public GameObject player;
+    public GameObject Player;
+    public GameObject Worker;
 
-    //int inventar;
-    //int multiplikator;
-    //int bauKosten;
-    //int typ;
+    public GameObject Spawn;
 
-    //int stufeGeldKosten;
-    //int stufeHolzKosten;
-    //int stufeSteinKosten;
-    //int stufeMetalKosten;
-
-    //int arbeiterGeldKosten;
-    //int arbeiterHolzKosten;
-    //int arbeiterSteinKosten;
-    //int arbeiterMetalKosten;
-
-    //int stufeGeld;
-    //int stufeHolz;
-    //int stufeStein;
-    //int stufeMetal;
-
-    //int arbeiterGeld;
-    //int arbeiterHolz;
-    //int arbeiterStein;
-    //int arbeiterMetal;
-
-    //public Text KostenTextGeld;
-    //public Text KostenTextHolz;
-    //public Text KostenTextStein;
-    //public Text KostenTextMetal;
-
-    //public Text KostenTextGeldArbeiter;
-    //public Text KostenTextHolzArbeiter;
-    //public Text KostenTextSteinArbeiter;
-    //public Text KostenTextMetalArbeiter;
-
-    public GameObject player;
+    int farmHouseWorker;
+    int farmWorker;
+    int houseWorker;
+    int towerWorker;
 
     int inventar;
     int multiplyer;
@@ -148,30 +119,30 @@ public class Buying : MonoBehaviour                  //Kaufen
     {
         if (subtractFabric == 0)//Geld
         {
-            inventar = player.GetComponent<PlayerInventar>().playerMoney;
+            inventar = Player.GetComponent<PlayerInventar>().playerMoney;
             inventar = inventar - expension;
-            player.GetComponent<PlayerInventar>().playerMoney = inventar;
+            Player.GetComponent<PlayerInventar>().playerMoney = inventar;
 
         }
         else if (subtractFabric == 1)//Holz
         {
-            inventar = player.GetComponent<PlayerInventar>().playerWood;
+            inventar = Player.GetComponent<PlayerInventar>().playerWood;
             inventar = inventar - expension;
-            player.GetComponent<PlayerInventar>().playerWood = inventar;
+            Player.GetComponent<PlayerInventar>().playerWood = inventar;
 
         }
         else if (subtractFabric == 2)//Stein
         {
-            inventar = player.GetComponent<PlayerInventar>().playerStone;
+            inventar = Player.GetComponent<PlayerInventar>().playerStone;
             inventar = inventar - expension;
-            player.GetComponent<PlayerInventar>().playerStone = inventar;
+            Player.GetComponent<PlayerInventar>().playerStone = inventar;
 
         }
         else if (subtractFabric == 3)//Metal
         {
-            inventar = player.GetComponent<PlayerInventar>().playerHay;
+            inventar = Player.GetComponent<PlayerInventar>().playerHay;
             inventar = inventar - expension;
-            player.GetComponent<PlayerInventar>().playerHay = inventar;
+            Player.GetComponent<PlayerInventar>().playerHay = inventar;
 
         }
         ExpensionAddition(subtractFabric, workUpgrade);
@@ -229,7 +200,7 @@ public class Buying : MonoBehaviour                  //Kaufen
     {
         if (art == 0)
         {
-            if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
+            if (Player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
             {
                 BuyingHouses(art);
                 SubtractFabric(art, levelMoneyExpension, 1);
@@ -240,7 +211,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 1)
         {
-            if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
+            if (Player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
             {
                 BuyingHouses(art);
                 SubtractFabric(art, levelWoodExpension, 1);
@@ -251,7 +222,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 2)
         {
-            if (player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
+            if (Player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
             {
                 BuyingHouses(art);
                 SubtractFabric(art, levelStoneExpension, 1);
@@ -262,7 +233,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 3)
         {
-            if (player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
+            if (Player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
             {
                 BuyingHouses(art);
                 SubtractFabric(art, levelHayExpension, 1);
@@ -277,42 +248,74 @@ public class Buying : MonoBehaviour                  //Kaufen
     {
         if (art == 0)
         {
-            if (player.GetComponent<PlayerInventar>().playerMoney >= workmenMoneyExpension)
+            if (Player.GetComponent<PlayerInventar>().playerMoney >= workmenMoneyExpension)
             {
                 BuyingWorkmen(art);
                 SubtractFabric(art, workmenMoneyExpension, 0);
                 workmensMoney++;
                 WorkmenExpensionDisplay(art);
+
+                if (farmHouseWorker <= 10)
+                {
+                    GameObject temp = Instantiate(Worker, Spawn.transform.position, Quaternion.identity);
+                    MenController mController = temp.GetComponent<MenController>();
+                    mController.WorkerFindTarget(art);
+                    farmHouseWorker++;
+                }
             }
         }
         else if (art == 1)
         {
-            if (player.GetComponent<PlayerInventar>().playerWood >= workmenWoodExpension)
+            if (Player.GetComponent<PlayerInventar>().playerWood >= workmenWoodExpension)
             {
                 BuyingWorkmen(art);
                 SubtractFabric(art, workmenWoodExpension, 0);
                 workmensWood++;
                 WorkmenExpensionDisplay(art);
+
+                if (farmWorker <= 10)
+                {
+                    GameObject temp = Instantiate(Worker, Spawn.transform.position, Quaternion.identity);
+                    MenController mController = temp.GetComponent<MenController>();
+                    mController.WorkerFindTarget(art);
+                    farmWorker++;
+                }
             }
         }
         else if (art == 2)
         {
-            if (player.GetComponent<PlayerInventar>().playerStone >= workmenStoneExpension)
+            if (Player.GetComponent<PlayerInventar>().playerStone >= workmenStoneExpension)
             {
                 BuyingWorkmen(art);
                 SubtractFabric(art, workmenStoneExpension, 0);
                 workmensStone++;
                 WorkmenExpensionDisplay(art);
+
+                if (houseWorker <= 10)
+                {
+                    GameObject temp = Instantiate(Worker, Spawn.transform.position, Quaternion.identity);
+                    MenController mController = temp.GetComponent<MenController>();
+                    mController.WorkerFindTarget(art);
+                    houseWorker++;
+                }
             }
         }
         else if (art == 3)
         {
-            if (player.GetComponent<PlayerInventar>().playerHay >= workmenHayExpension)
+            if (Player.GetComponent<PlayerInventar>().playerHay >= workmenHayExpension)
             {
                 BuyingWorkmen(art);
                 SubtractFabric(art, workmenHayExpension, 0);
                 workmensHay++;
                 WorkmenExpensionDisplay(art);
+
+                if (towerWorker <= 10)
+                {
+                    GameObject temp = Instantiate(Worker, Spawn.transform.position, Quaternion.identity);
+                    MenController mController = temp.GetComponent<MenController>();
+                    mController.WorkerFindTarget(art);
+                    towerWorker++;
+                }
             }
         }
     }
@@ -321,7 +324,7 @@ public class Buying : MonoBehaviour                  //Kaufen
     {
         if (art == 0)
         {
-            if (player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
+            if (Player.GetComponent<PlayerInventar>().playerMoney >= levelMoneyExpension)
             {
                 BuyingNewBuildings(art);
                 SubtractFabric(art, levelMoneyExpension, 1);
@@ -332,7 +335,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 1)
         {
-            if (player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
+            if (Player.GetComponent<PlayerInventar>().playerWood >= levelWoodExpension)
             {
                 BuyingNewBuildings(art);
                 SubtractFabric(art, levelWoodExpension, 1);
@@ -343,7 +346,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 2)
         {
-            if (player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
+            if (Player.GetComponent<PlayerInventar>().playerStone >= levelStoneExpension)
             {
                 BuyingNewBuildings(art);
                 SubtractFabric(art, levelStoneExpension, 1);
@@ -354,7 +357,7 @@ public class Buying : MonoBehaviour                  //Kaufen
         }
         else if (art == 3)
         {
-            if (player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
+            if (Player.GetComponent<PlayerInventar>().playerHay >= levelHayExpension)
             {
                 BuyingNewBuildings(art);
                 SubtractFabric(art, levelHayExpension, 1);
@@ -367,16 +370,16 @@ public class Buying : MonoBehaviour                  //Kaufen
 
     public void BuyingNewBuildings(int buyingBuildingFabric)
     {
-        player.GetComponent<MoneyProduction>().NewBuilding(buyingBuildingFabric);
+        Player.GetComponent<MoneyProduction>().NewBuilding(buyingBuildingFabric);
     }
 
     public void BuyingHouses(int buyingHousesFabric)
     {
-        player.GetComponent<MoneyProduction>().Extensions(buyingHousesFabric);
+        Player.GetComponent<MoneyProduction>().Extensions(buyingHousesFabric);
     }
 
     public void BuyingWorkmen(int buyingWorkmenFabric)
     {
-        player.GetComponent<MoneyProduction>().WorkmenBuyings(buyingWorkmenFabric);
+        Player.GetComponent<MoneyProduction>().WorkmenBuyings(buyingWorkmenFabric);
     }
 }

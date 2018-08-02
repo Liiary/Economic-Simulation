@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114260922359153826}
   - component: {fileID: 114581390153333964}
   - component: {fileID: 114178010192718422}
+  - component: {fileID: 114056785395484790}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -46,6 +47,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114056785395484790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116883311032572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b39c291ad93bb4cbfbf7582fa9594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114178010192718422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cde452a7e977f0498793ad604b6250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1116883311032572}
+  Player: {fileID: 1116883311032572}
+  Worker: {fileID: 1325820790564110, guid: 47ae14b6dd9b541448b31229df8df8ca, type: 2}
+  Spawn: {fileID: 0}
   ExpensionMoneyText: {fileID: 0}
   ExpensionWoodText: {fileID: 0}
   ExpensionStoneText: {fileID: 0}
@@ -180,6 +194,8 @@ MonoBehaviour:
   MaxBuilding: {fileID: 0}
   Shop: {fileID: 0}
   GetResources: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  GameRules: {fileID: 0}
 --- !u!114 &114688859721442894
 MonoBehaviour:
   m_ObjectHideFlags: 1

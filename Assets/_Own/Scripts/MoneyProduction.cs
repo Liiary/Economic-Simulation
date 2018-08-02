@@ -5,44 +5,6 @@ using UnityEngine.UI;
 
 public class MoneyProduction : MonoBehaviour                        //GeldProduzieren
 {
-    //public Text GeldText;
-    //public Text HolzText;
-    //public Text SteinText;
-    //public Text MetalText;
-
-    //public int Geld;
-    //public int Holz;
-    //public int Stein;
-    //public int Metal;
-    //public int zusatzGeld;
-    //public int zusatzHolz;
-    //public int zusatzStein;
-    //public int zusatzMetal;
-    //public int erweiterungenGeld = 0;
-    //public int erweiterungenHolz = 0;
-    //public int erweiterungenStein = 0;
-    //public int erweiterungenMetal = 0;
-    //public int ArbeiterGeld;
-    //public int ArbeiterHolz;
-    //public int ArbeiterStein;
-    //public int ArbeiterMetal;
-
-    //public Text verbesserungsText;
-
-    //private BuildBuilding buildBuilding;
-    //private UpgradeBuilding upgradeFarmHouse;
-    //private UpgradeBuilding upgradeFarm;
-    //private UpgradeBuilding upgradeHouse;
-    //private UpgradeBuilding upgradeTower;
-    //[SerializeField]
-    //private GameObject farmHouse;
-    //[SerializeField]
-    //private GameObject farm;
-    //[SerializeField]
-    //private GameObject house;
-    //[SerializeField]
-    //private GameObject tower;
-
     public Text MoneyText;
     public Text WoodText;
     public Text StoneText;
@@ -182,21 +144,21 @@ public class MoneyProduction : MonoBehaviour                        //GeldProduz
         }
     }
 
-    public void WorkmenBuyings(int workmenBying)                 //public void ArbeiterKaufen(int stoff)
+    public void WorkmenBuyings(int workmenBuying)                 //public void ArbeiterKaufen(int stoff)
     {
-        if (workmenBying == 0)
+        if (workmenBuying == 0)
         {
             workmenMoney++;
         }
-        else if (workmenBying == 1)
+        else if (workmenBuying == 1)
         {
             workmenWood++;
         }
-        else if (workmenBying == 2)
+        else if (workmenBuying == 2)
         {
             workmenStone++;
         }
-        else if (workmenBying == 3)
+        else if (workmenBuying == 3)
         {
             workmenHay++;
         }

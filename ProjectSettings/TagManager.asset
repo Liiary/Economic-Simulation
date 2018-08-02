@@ -12,6 +12,10 @@ TagManager:
   - Grass
   - GameManager
   - BuildingMax
+  - Bank
+  - Tree
+  - Stone
+  - Hay
   layers:
   - Default
   - TransparentFX

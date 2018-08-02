@@ -27,7 +27,6 @@ public class UpgradeBuilding : MonoBehaviour
 
         if (buildingNumber == 0)
         {
-            //GameObject farmHouse = GameObject.FindWithTag("FarmHouse");
             GameObject farmHouse = MouseControll.ChoosenBuilding.gameObject;
             choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
@@ -47,7 +46,6 @@ public class UpgradeBuilding : MonoBehaviour
 
         if (buildingNumber == 1)
         {
-            //GameObject farm = GameObject.FindWithTag("Farm");
             GameObject farm = MouseControll.ChoosenBuilding.gameObject;
             choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
@@ -67,7 +65,6 @@ public class UpgradeBuilding : MonoBehaviour
 
         if(buildingNumber == 2)
         {
-            //GameObject house = GameObject.FindWithTag("House");
             GameObject house = MouseControll.ChoosenBuilding.gameObject;
             choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
@@ -86,7 +83,6 @@ public class UpgradeBuilding : MonoBehaviour
 
         if(buildingNumber == 3)
         {
-            //GameObject tower = GameObject.FindWithTag("Tower");
             GameObject tower = MouseControll.ChoosenBuilding.gameObject;
             choosenHouse = MouseControll.ChoosenBuilding.GetComponent<HouseScript>();
 
